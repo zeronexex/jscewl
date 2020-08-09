@@ -26,7 +26,7 @@ func main() {
 func fetchJsFile(JsFile string) {
 	
 	if strings.Contains(fmt.Sprintf("%v", JsFile), "://") == false || strings.Contains(fmt.Sprintf("%v", JsFile), ".js") == false {
-		fmt.Printf("Bad url: %v \nMake sure the url points to a Js file", JsFile)
+		fmt.Printf("Bad url: %v \nMake sure the url points to a Js file\n", JsFile)
 	} else {
 		uri := JsFile
 		resp, err := http.Get(uri)
