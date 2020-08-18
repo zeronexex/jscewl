@@ -67,11 +67,10 @@ func wordWorker(content string) {
 	
 	var anew []string
 	for _, _word := range bWords {
-		effWord := strings.ToLower(_word)
-		if len(effWord) > 1 {
-			if stringInSlice(effWord, stripOff) == false {
-				if stringInSlice(effWord, anew) == false {
-					anew = append(anew, effWord)
+		if len(_word) > 1 {
+			if stringInSlice(_word, stripOff) == false {
+				if stringInSlice(_word, anew) == false {
+					anew = append(anew, _word)
 				}
 			}
 		}
